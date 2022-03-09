@@ -1,5 +1,10 @@
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        answer = [stone for stone in stones if stone in jewels]
-        return  len(answer)
+        jewel = collections.defaultdict(int)
+        for j in  jewels:
+            jewel[j] = 1
+        
+        answer = [stone for stone in stones if stone in jewel]
+        return len(answer)
+            
         
