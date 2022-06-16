@@ -13,7 +13,6 @@ public:
                 answer = one_step_before + two_steps_before;
                 two_steps_before = one_step_before;
                 one_step_before = answer; 
-                cout << answer << two_steps_before << one_step_before << endl;
             }
         }
         return answer;
