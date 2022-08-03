@@ -1,13 +1,8 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        correct = 0
-        for i in range(len(t)):
-            if correct == len(s):
-                return True
-            if t[i] == s[correct]:
-                correct += 1
-        if correct == len(s):
-            return True
-        print(correct)
-        return False
-        
+        i, j = 0, 0
+        while (i < len(s)) and (j < len(t)):
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+        return i == len(s)
